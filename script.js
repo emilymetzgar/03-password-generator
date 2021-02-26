@@ -6,10 +6,7 @@ var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
 
 function getPasswordOptions() {
-  var useSpecial = window.confirm("Click OK to include special characters");
-  var useNumbers = window.confirm("Click OK to include numbers");
-  var useLowercase = window.confirm("Click OK to include lowercase letters");
-  var useUppercase = window.confirm("Click OK to include uppercase lettters");
+  
   // Variable to store length of password from user input
   var length =  parseInt(
     window.prompt("How many total characters would you like your password to be?"));
@@ -30,6 +27,11 @@ function getPasswordOptions() {
     alert('Password length must be less than 129 characters');
     return;
   }
+
+  var useSpecial = window.confirm("Click OK to include special characters");
+  var useNumbers = window.confirm("Click OK to include numbers");
+  var useLowercase = window.confirm("Click OK to include lowercase letters");
+  var useUppercase = window.confirm("Click OK to include uppercase lettters");
   
   var passwordOptions = {
   length: length,
